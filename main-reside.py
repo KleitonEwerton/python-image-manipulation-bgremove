@@ -3,6 +3,10 @@ import cv2
 import numpy as np
 from PIL import Image, ImageEnhance, ImageFilter
 
+# Caminho da pasta de entrada e saída
+pasta_entrada = 'img-input'
+pasta_saida = 'img-output'
+
 def redimensionar_imagem(image_path, nova_largura):
     # Carregar a imagem usando OpenCV
     imagem = cv2.imread(image_path)
@@ -64,9 +68,7 @@ def processar_imagens_pasta(pasta_entrada, pasta_saida, nova_largura):
             except Exception as e:
                 print(f"Erro ao processar a imagem {nome_arquivo}: {e}")
 
-# Caminho da pasta de entrada e saída
-pasta_entrada = 'img-input'
-pasta_saida = 'img-output'
+
 
 # Nova largura desejada
 nova_largura = 1500
